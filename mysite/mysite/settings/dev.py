@@ -1,12 +1,15 @@
 import os
 from .base import *
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 try:
-    SECRET_KEY = os.environ["SECRET_KEY"]
+    SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 except KeyError as e:
     raise RuntimeError("Could not find a SECRET_KEY in environment") from e
 
