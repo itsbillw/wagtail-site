@@ -161,3 +161,4 @@ cython_debug/
 
 #Media and files
 media/
+mysite/static
